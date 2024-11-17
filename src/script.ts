@@ -24,6 +24,7 @@ class Person implements IPerson {
 
 const person1 = new Person('Ivan', 26);
 person1.greet();
+console.log('');
 
 // Task2
 console.log(`Task #2\n`);
@@ -70,3 +71,32 @@ console.log(`Длина окружности: ${circle.calculatePerimeter()}`);
 let rectangle = new Rectangle(4, 5);
 console.log(`Площадь прямоугольника: ${rectangle.calculateArea()}`);
 console.log(`Периметр прямоугольника: ${rectangle.calculatePerimeter()}`);
+console.log('');
+
+// Task3
+type Pet = {
+    name: string,
+    breed?: string,
+    color?: string
+}
+
+const Dog: Pet = {
+    name: 'Dog1',
+    breed: 'golden retriever'
+}
+
+const Cat: Pet = {
+    name: 'Cat1',
+    color: 'white'
+}
+
+function printPetInfo(pet: Pet): void {
+    if (pet.breed) {
+        console.log(`Dog name: ${pet.name} and breed: ${pet.breed}`);
+    } else if (pet.color) {
+        console.log(`Cat name: ${pet.name} and color: ${pet.color}`);
+    }
+}
+
+printPetInfo(Dog);
+printPetInfo(Cat);

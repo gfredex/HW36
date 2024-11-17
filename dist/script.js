@@ -12,6 +12,7 @@ class Person {
 }
 const person1 = new Person('Ivan', 26);
 person1.greet();
+console.log('');
 // Task2
 console.log(`Task #2\n`);
 class Circle {
@@ -43,3 +44,22 @@ console.log(`Длина окружности: ${circle.calculatePerimeter()}`);
 let rectangle = new Rectangle(4, 5);
 console.log(`Площадь прямоугольника: ${rectangle.calculateArea()}`);
 console.log(`Периметр прямоугольника: ${rectangle.calculatePerimeter()}`);
+console.log('');
+const Dog = {
+    name: 'Dog1',
+    breed: 'golden retriever'
+};
+const Cat = {
+    name: 'Cat1',
+    color: 'white'
+};
+function printPetInfo(pet) {
+    if (pet.breed) {
+        console.log(`Dog name: ${pet.name} and breed: ${pet.breed}`);
+    }
+    else if (pet.color) {
+        console.log(`Cat name: ${pet.name} and color: ${pet.color}`);
+    }
+}
+printPetInfo(Dog);
+printPetInfo(Cat);
